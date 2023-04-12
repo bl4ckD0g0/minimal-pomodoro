@@ -10,15 +10,16 @@ function playAlert() {
 
 // Función para activar la alerta cada X ms.
 function activateAlert() {
-    var activationTime = 5000;
-    var remainingTime = activationTime / 1000;
-    intervalId = setInterval(function() {
-        remainingTime -= 1;
-        document.getElementById("timer").innerHTML = remainingTime;
-        if (remainingTime <= 0) {
-            playAlert();
-        }
-    }, 1000);
+  var activationTime = 2000;
+  var remainingTime = activationTime;
+  intervalId = setInterval(function() {
+    remainingTime -= 100;
+    var remainingTimeDisplay = (remainingTime / 1000).toFixed(3);
+    document.getElementById("timer").innerHTML = remainingTimeDisplay + " s";
+    if (remainingTime <= 0) {
+      playAlert();
+    }
+  }, 100);
 }
 
 // Evento click del botón
