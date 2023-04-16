@@ -1,6 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 .center {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+}
+
+#timer {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 70px;
+    margin: auto;
+}
+
+#alert-btn {
+    all: unset;
+    background-color: white;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 70px;
+    padding: 1ch;
+    cursor: pointer;
+}
+
+#alert-btn:focus {
+  outline: orange 5px solid;
 }

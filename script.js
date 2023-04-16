@@ -3,7 +3,6 @@ function playAlert() {
     var source = 'https://freesound.org/data/previews/80/80921_1022651-lq.mp3';
     var audio = new Audio(source);
     clearInterval(intervalId);
-    document.getElementById("timer").innerHTML = "";
     changeBackgroundColor();
     audio.play();
 }
@@ -15,7 +14,7 @@ function activateAlert() {
   intervalId = setInterval(function() {
     remainingTime -= 100;
     var remainingTimeDisplay = (remainingTime / 1000).toFixed(3);
-    document.getElementById("timer").innerHTML = remainingTimeDisplay + " s";
+    document.getElementById("timer").innerHTML = remainingTimeDisplay;
     if (remainingTime <= 0) {
       playAlert();
     }
