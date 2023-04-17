@@ -21,8 +21,13 @@
     font-size: 70px;
     padding: 1ch;
     cursor: pointer;
+    border-radius: 25px;
 }
 
 #alert-btn:focus {
   outline: orange 5px solid;
+}
+
+#alert-btn:hover {
+    font-size: 90px;
 }
